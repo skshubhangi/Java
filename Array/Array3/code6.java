@@ -1,25 +1,25 @@
 package Java.Array.Array3;
-
 import java.util.*;
 
-
-class code4{
+class code6 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter array size:");
+        System.out.println("Enter size:");
         int size = sc.nextInt();
-        int arr[] = new int[size];
+        char arr[] = new char[size];
         System.out.println("Enter array element:");
         for(int i=0;i<size;i++){
-            arr[i]=sc.nextInt();
+            arr[i]=sc.next().charAt(0);
         }
         for(int i=0;i<size;i++){
-            if(i%2==0){
-                arr[i]=1;
+            if(arr[i]=='A'||arr[i]=='E'||arr[i]=='I'||arr[i]=='O'||arr[i]=='U'||
+            arr[i]=='a'||arr[i]=='e'||arr[i]=='i'||arr[i]=='o'||arr[i]=='u'){
+
             }else{
-                arr[i]=0;
+                System.out.print(arr[i]+" ");
             }
-            System.out.print(arr[i]+" ");
         }
+
     }
+    
 }

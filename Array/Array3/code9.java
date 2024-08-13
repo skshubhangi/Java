@@ -1,9 +1,7 @@
 package Java.Array.Array3;
+import java.util.Scanner;
 
-import java.util.*;
-
-
-class code4{
+class code9 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter array size:");
@@ -13,13 +11,20 @@ class code4{
         for(int i=0;i<size;i++){
             arr[i]=sc.nextInt();
         }
+        System.out.println("Prime elements are:");
         for(int i=0;i<size;i++){
-            if(i%2==0){
-                arr[i]=1;
-            }else{
-                arr[i]=0;
+            int temp=1;
+            int count=0;
+            while(arr[i]>=temp){
+                if(arr[i]%temp==0){
+                    count++;
+                }
+                temp++;
             }
-            System.out.print(arr[i]+" ");
+            if(count==2){
+                System.out.print(arr[i]+" ");
+            }
         }
     }
+    
 }
